@@ -5,7 +5,10 @@ class Livro {
 	int codigo;
 	String nome;
 	Boolean status;
-	String pessoa;
+	static belongsTo = [pessoa: Pessoa];
+
+	def emprestar(){
+	}
 
     static constraints = {
     }

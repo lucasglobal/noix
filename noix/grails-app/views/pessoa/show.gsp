@@ -23,6 +23,35 @@
 			</g:if>
 			<ol class="property-list pessoa">
 			
+				<g:if test="${pessoaInstance?.codigo}">
+				<li class="fieldcontain">
+					<span id="codigo-label" class="property-label"><g:message code="pessoa.codigo.label" default="Codigo" /></span>
+					
+						<span class="property-value" aria-labelledby="codigo-label"><g:fieldValue bean="${pessoaInstance}" field="codigo"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${pessoaInstance?.livros}">
+				<li class="fieldcontain">
+					<span id="livros-label" class="property-label"><g:message code="pessoa.livros.label" default="Livros" /></span>
+					
+						<g:each in="${pessoaInstance.livros}" var="l">
+						<span class="property-value" aria-labelledby="livros-label"><g:link controller="livro" action="show" id="${l.id}">${l?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${pessoaInstance?.nome}">
+				<li class="fieldcontain">
+					<span id="nome-label" class="property-label"><g:message code="pessoa.nome.label" default="Nome" /></span>
+					
+						<span class="property-value" aria-labelledby="nome-label"><g:fieldValue bean="${pessoaInstance}" field="nome"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:pessoaInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

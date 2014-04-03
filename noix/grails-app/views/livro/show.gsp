@@ -45,7 +45,7 @@
 				<li class="fieldcontain">
 					<span id="pessoa-label" class="property-label"><g:message code="livro.pessoa.label" default="Pessoa" /></span>
 					
-						<span class="property-value" aria-labelledby="pessoa-label"><g:fieldValue bean="${livroInstance}" field="pessoa"/></span>
+						<span class="property-value" aria-labelledby="pessoa-label"><g:link controller="pessoa" action="show" id="${livroInstance?.pessoa?.id}">${livroInstance?.pessoa?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

@@ -20,12 +20,12 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: livroInstance, field: 'pessoa', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: livroInstance, field: 'pessoa', 'error')} required">
 	<label for="pessoa">
 		<g:message code="livro.pessoa.label" default="Pessoa" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="pessoa" value="${livroInstance?.pessoa}"/>
+	<g:select id="pessoa" name="pessoa.id" from="${noix.Pessoa.list()}" optionKey="id" required="" value="${livroInstance?.pessoa?.id}" class="many-to-one"/>
 
 </div>
 
