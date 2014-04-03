@@ -63,6 +63,7 @@
 			<g:form url="[resource:livroInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
 					<g:link class="edit" action="edit" resource="${livroInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+					<g:link class="emprestar" action="emprestar" id="${livroInstance?.id}" resource="${livroInstance}"><g:message code="default.button.emprestar.label" default="emprestar" /></g:link>
 					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>
