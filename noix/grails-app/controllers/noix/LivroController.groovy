@@ -101,7 +101,4 @@ class LivroController {
             '*'{ render status: NOT_FOUND }
         }
     }
-    def emprestar(){
-        render "O livro será emprestado";
-    }
 }

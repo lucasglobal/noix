@@ -11,5 +11,8 @@ class Livro {
 	}
 
     static constraints = {
+    	pessoa unique: true;
+    	pessoa nullable: true;
+    	status display: (false);
     }
 }

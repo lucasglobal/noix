@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: livroInstance, field: 'codigo', 'error')} required">
-	<label for="codigo">
-		<g:message code="livro.codigo.label" default="Codigo" />
-		<span class="required-indicator">*</span>
+<div class="fieldcontain ${hasErrors(bean: livroInstance, field: 'pessoa', 'error')} ">
+	<label for="pessoa">
+		<g:message code="livro.pessoa.label" default="Pessoa" />
+		
 	</label>
-	<g:field name="codigo" type="number" value="${livroInstance.codigo}" required=""/>
+	<g:select id="pessoa" name="pessoa.id" from="${noix.Pessoa.list()}" optionKey="id" value="${livroInstance?.pessoa?.id}" class="many-to-one" noSelection="['null': '']"/>
 
 </div>
 
@@ -17,15 +17,6 @@
 		
 	</label>
 	<g:textField name="nome" value="${livroInstance?.nome}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: livroInstance, field: 'pessoa', 'error')} required">
-	<label for="pessoa">
-		<g:message code="livro.pessoa.label" default="Pessoa" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="pessoa" name="pessoa.id" from="${noix.Pessoa.list()}" optionKey="id" required="" value="${livroInstance?.pessoa?.id}" class="many-to-one"/>
 
 </div>
 
