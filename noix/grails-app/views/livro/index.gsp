@@ -24,6 +24,10 @@
 			<thead>
 					<tr>
 					
+						<g:sortableColumn property="status" title="${message(code: 'livro.status.label', default: 'Status')}" />
+					
+						<th><g:message code="livro.pessoa.label" default="Pessoa" /></th>
+					
 						<g:sortableColumn property="codigo" title="${message(code: 'livro.codigo.label', default: 'Codigo')}" />
 					
 						<g:sortableColumn property="nome" title="${message(code: 'livro.nome.label', default: 'Nome')}" />
@@ -34,7 +38,11 @@
 				<g:each in="${livroInstanceList}" status="i" var="livroInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${livroInstance.id}">${fieldValue(bean: livroInstance, field: "codigo")}</g:link></td>
+						<td><g:link action="show" id="${livroInstance.id}">${fieldValue(bean: livroInstance, field: "status")}</g:link></td>
+					
+						<td>${fieldValue(bean: livroInstance, field: "pessoa")}</td>
+					
+						<td>${fieldValue(bean: livroInstance, field: "codigo")}</td>
 					
 						<td>${fieldValue(bean: livroInstance, field: "nome")}</td>
 					
