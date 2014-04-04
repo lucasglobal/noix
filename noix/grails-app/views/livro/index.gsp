@@ -26,9 +26,9 @@
 					
 						<th><g:message code="livro.pessoa.label" default="Pessoa" /></th>
 					
-						<g:sortableColumn property="nome" title="${message(code: 'livro.nome.label', default: 'Nome')}" />
+						<g:sortableColumn property="codigo" title="${message(code: 'livro.codigo.label', default: 'Codigo')}" />
 					
-						<g:sortableColumn property="status" title="${message(code: 'livro.status.label', default: 'Status')}" />
+						<g:sortableColumn property="nome" title="${message(code: 'livro.nome.label', default: 'Nome')}" />
 					
 					</tr>
 				</thead>
@@ -38,9 +38,9 @@
 					
 						<td><g:link action="show" id="${livroInstance.id}">${fieldValue(bean: livroInstance, field: "pessoa")}</g:link></td>
 					
-						<td>${fieldValue(bean: livroInstance, field: "nome")}</td>
+						<td>${fieldValue(bean: livroInstance, field: "codigo")}</td>
 					
-						<td><g:formatBoolean boolean="${livroInstance.status}" /></td>
+						<td>${fieldValue(bean: livroInstance, field: "nome")}</td>
 					
 					</tr>
 				</g:each>

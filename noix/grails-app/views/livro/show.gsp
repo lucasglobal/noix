@@ -32,20 +32,20 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${livroInstance?.codigo}">
+				<li class="fieldcontain">
+					<span id="codigo-label" class="property-label"><g:message code="livro.codigo.label" default="Codigo" /></span>
+					
+						<span class="property-value" aria-labelledby="codigo-label"><g:fieldValue bean="${livroInstance}" field="codigo"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${livroInstance?.nome}">
 				<li class="fieldcontain">
 					<span id="nome-label" class="property-label"><g:message code="livro.nome.label" default="Nome" /></span>
 					
 						<span class="property-value" aria-labelledby="nome-label"><g:fieldValue bean="${livroInstance}" field="nome"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${livroInstance?.status}">
-				<li class="fieldcontain">
-					<span id="status-label" class="property-label"><g:message code="livro.status.label" default="Status" /></span>
-					
-						<span class="property-value" aria-labelledby="status-label"><g:formatBoolean boolean="${livroInstance?.status}" /></span>
 					
 				</li>
 				</g:if>
