@@ -11,24 +11,6 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: pessoaInstance, field: 'livros', 'error')} ">
-	<label for="livros">
-		<g:message code="pessoa.livros.label" default="Livros" />
-		
-	</label>
-	
-<ul class="one-to-many">
-<g:each in="${pessoaInstance?.livros?}" var="l">
-    <li><g:link controller="livro" action="show" id="${l.id}">${l?.encodeAsHTML()}</g:link></li>
-</g:each>
-<li class="add">
-<g:link controller="livro" action="create" params="['pessoa.id': pessoaInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'livro.label', default: 'Livro')])}</g:link>
-</li>
-</ul>
-
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: pessoaInstance, field: 'nome', 'error')} ">
 	<label for="nome">
 		<g:message code="pessoa.nome.label" default="Nome" />

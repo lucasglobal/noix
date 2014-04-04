@@ -23,15 +23,6 @@
 			</g:if>
 			<ol class="property-list livro">
 			
-				<g:if test="${livroInstance?.pessoa}">
-				<li class="fieldcontain">
-					<span id="pessoa-label" class="property-label"><g:message code="livro.pessoa.label" default="Pessoa" /></span>
-					
-						<span class="property-value" aria-labelledby="pessoa-label"><g:link controller="pessoa" action="show" id="${livroInstance?.pessoa?.id}">${livroInstance?.pessoa?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${livroInstance?.codigo}">
 				<li class="fieldcontain">
 					<span id="codigo-label" class="property-label"><g:message code="livro.codigo.label" default="Codigo" /></span>

@@ -2,15 +2,6 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: livroInstance, field: 'pessoa', 'error')} ">
-	<label for="pessoa">
-		<g:message code="livro.pessoa.label" default="Pessoa" />
-		
-	</label>
-	<g:select id="pessoa" name="pessoa.id" from="${noix.Pessoa.list()}" optionKey="id" value="${livroInstance?.pessoa?.id}" class="many-to-one" noSelection="['null': '']"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: livroInstance, field: 'codigo', 'error')} required">
 	<label for="codigo">
 		<g:message code="livro.codigo.label" default="Codigo" />

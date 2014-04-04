@@ -32,17 +32,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${pessoaInstance?.livros}">
-				<li class="fieldcontain">
-					<span id="livros-label" class="property-label"><g:message code="pessoa.livros.label" default="Livros" /></span>
-					
-						<g:each in="${pessoaInstance.livros}" var="l">
-						<span class="property-value" aria-labelledby="livros-label"><g:link controller="livro" action="show" id="${l.id}">${l?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${pessoaInstance?.nome}">
 				<li class="fieldcontain">
 					<span id="nome-label" class="property-label"><g:message code="pessoa.nome.label" default="Nome" /></span>

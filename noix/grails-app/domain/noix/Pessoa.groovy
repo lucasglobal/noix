@@ -11,5 +11,7 @@ class Pessoa {
 
 
     static constraints = {
+    	livros nullable: true;
+    	livros display: (false);
     }
 }
